@@ -118,12 +118,12 @@ var fetchProfileAndWriteToFile = function(readFilePath, writeFilePath) {
     })
     .then(function(profile) {
       console.log('profile: ', profile);
-      return fs.writeFileAsync(writeFilePath, JSON.stringify(profile))
+      return fs.writeFileAsync(writeFilePath, JSON.stringify(profile));
     })
     .catch(function(err) {
       console.log('Oops, there\'s an error!');
       return err;
-    })    
+    });    
 };
 
 
